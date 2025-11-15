@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Сабельников Иван Алексеевич | Frontend-разработчик</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .resume-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            background: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin: 0 auto 1rem auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .experience-item, .education-item, .project {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .experience-item:hover, .project:hover {
+            transform: translateX(5px);
+        }
+
+        .company {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-top: 4px solid #e74c3c;
+        }
+
+        .skill-category:nth-child(2) {
+            border-top-color: #3498db;
+        }
+
+        .skill-category:nth-child(3) {
+            border-top-color: #2ecc71;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            main {
+                padding: 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resume-card">
+            <header>
+                <div class="profile-img">ИС</div>
+                <h1>Сабельников Иван Алексеевич</h1>
+                <p class="subtitle">Frontend-разработчик</p>
+                <p class="tagline">Создаю современные веб-приложения с фокусом на пользовательский опыт</p>
+            </header>
+
+            <main>
+                <section id="about">
+                    <h2>Обо мне</h2>
+                    <p>Frontend-разработчик с 3-летним опытом создания современных веб-приложений. Увлекаюсь разработкой пользовательских интерфейсов, оптимизацией производительности и изучением новых технологий. Специализируюсь на JavaScript и React, постоянно совершенствую свои навыки в веб-разработке.</p>
+                </section>
+
+                <section id="experience">
+                    <h2>Опыт работы</h2>
+                    <div class="experience-item">
+                        <h3>Frontend-разработчик</h3>
+                        <p class="company">Компания "ТехноСити"</p>
+                        <p class="date">3 года (2021 - 2024)</p>
+                        <ul>
+                            <li>Разработка пользовательских интерфейсов на React</li>
+                            <li>Оптимизация производительности веб-приложений</li>
+                            <li>Улучшение пользовательского опыта</li>
+                            <li>Участие в полном цикле разработки проектов</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="education">
+                    <h2>Образование</h2>
+                    <div class="education-item">
+                        <h3>Среднее специальное образование</h3>
+                        <p><strong>Направление:</strong> Frontend-разработка</p>
+                        <p>Изучение современных веб-технологий и практическое применение в реальных проектах</p>
+                    </div>
+                </section>
+
+                <section id="skills">
+                    <h2>Навыки и технологии</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>JavaScript (ES6+)</li>
+                                <li>React</li>
+                                <li>HTML5 & CSS3</li>
+                                <li>Адаптивная верстка</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Backend & Другое</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>REST API</li>
+                                <li>Git & GitHub</li>
+                                <li>Системы контроля версий</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Инструменты</h3>
+                            <ul>
+                                <li>VS Code</li>
+                                <li>Chrome DevTools</li>
+                                <li>Figma</li>
+                                <li>Webpack</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects">
+                    <h2>Проекты</h2>
+                    <div class="project">
+                        <h3>TaskManager</h3>
+                        <p>Приложение для управления задачами с возможностью создания, редактирования и фильтрации. Реализовано на React с использованием современных подходов к разработке.</p>
+                        <p><strong>Технологии:</strong> 
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>WeatherApp</h3>
+                        <p>Приложение для просмотра прогноза погоды с интеграцией внешнего API. Адаптивный дизайн и удобный интерфейс для пользователей.</p>
+                        <p><strong>Технологии:</strong> 
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="contacts">
+                    <h2>Контакты</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Email</strong><br>
+                            <a href="mailto:isabelnikova86@gmail.com">isabelnikova86@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Телефон</strong><br>
+                            <em>89500593032</em>
+                        </div>
+                        <div class="contact-item">
+                            <strong>GitHub</strong><br>
+                            <em>https://github.com/isabelnikova86-debug</em>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location</strong><br>
+                            Иркутск, Россия
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>Сабельников Иван Алексеевич | Frontend-разработчик | 2025</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
